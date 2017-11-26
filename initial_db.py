@@ -18,10 +18,10 @@ end_year = current_season_start
 Loops through all seasons
 season_string is in the format of 2017-18
 '''
-for years in range(start_year, end_year + 1):
-    next_year = (years + 1)
+for year in range(start_year, end_year + 1):
+    next_year = (year + 1)
     string_next_year = str(next_year)
-    season_string = "{}-{}".format(years, string_next_year[-2:])
+    season_string = "{}-{}".format(year, string_next_year[-2:])
     stats = GameLog(season=season_string, season_type='Regular Season', player_or_team='P').overall()
     stats.to_sql('player_game_stats', conn, if_exists='append')
 
