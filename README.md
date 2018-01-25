@@ -64,7 +64,9 @@ database_name = 'nba.db'
 
 
 ## Notes
-*Special thanks to https://klane.github.io/databall1/data/wrangling/ for being a great starting point and reference*
+@klane *Special thanks to https://klane.github.io/databall1/data/wrangling/ for being a great starting point and reference*
+
+@seemethere *And of course to https://github.com/seemethere/nba_py for creating the python API*
 
 *By default, the script downloads raw player stat boxscores. Using these boxscores, additional advanced stats and team stats can be calculated on your own*
 
