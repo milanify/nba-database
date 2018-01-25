@@ -1,6 +1,6 @@
 # nba-database
 
-Create and update your own database of *National Basketball Association (NBA)* player box score statistics
+Create and update your own database of **National Basketball Association *(NBA)*** player box score statistics
 
 Or use this repository to download periodically updated database files (coming soon)
 
@@ -8,11 +8,11 @@ Or use this repository to download periodically updated database files (coming s
 ## Preview
 > Creating
 
-![alt tag](https://github.com/milan102/nba-database/blob/master/gifs/create.gif)
+![alt tag](https://github.com/milan102/nba-database/blob/master/preview/create.gif)
 
 > Updating
 
-![alt tag](https://github.com/milan102/nba-database/blob/master/gifs/update.gif)
+![alt tag](https://github.com/milan102/nba-database/blob/master/preview/update.gif)
 
 > Querying
 
@@ -22,7 +22,7 @@ SELECT * FROM player_reg_season
 	AND player_name = 'Stephen Curry'
 ```
 
-![alt tag](https://github.com/milan102/nba-database/blob/master/gifs/query.gif)
+![alt tag](https://github.com/milan102/nba-database/blob/master/preview/query.gif)
 
 
 ## Requirements/Dependencies
