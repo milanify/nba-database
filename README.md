@@ -2,7 +2,7 @@
 
 Create and update your own database of *National Basketball Association (NBA)* player box score statistics
 
-Or use this repository download updated database files (coming soon)
+Or use this repository to download periodically updated database files (coming soon)
 
 
 ## Preview
@@ -30,9 +30,15 @@ SELECT * FROM player_reg_season
 - [Make sure you have pip, run `pip --version` in a command line to verify](https://pip.pypa.io/en/stable/installing/)
 
 Do the following in a command line:
-```
+```python
 pip install requests
+```
+
+```
 pip install pandas
+```
+
+```
 pip install nba_py
 ```
 
@@ -40,19 +46,19 @@ pip install nba_py
 ## Instructions for Modifying Presets
 The *nba_db_presets.py* file has two items that can be changed:
 1. Database start year
-2. Name of the database file
+2. Name of database file
 
 I recommend you **do not** modify the start year because certain stats from before 1984 are missing and incomplete
 
 ```python
-\# Create database starting with the year Micheal Jordan got drafted, the 1984-85 season
+# Create database starting with the year Micheal Jordan got drafted, the 1984-85 season
 db_start_year = 1984
 
-\# Query up to the current year
+# Query up to the current year
 now = datetime.datetime.now()
 current_year = now.year
 
-\# Name of database file
+# Name of database file
 database_name = 'nba.db'
 ```
 
