@@ -16,11 +16,11 @@ Or use this repository download updated database files (coming soon)
 
 > Querying
 
-'''SQL
+```SQL
 SELECT * FROM player_reg_season
 	WHERE season_id LIKE '%2017'
 	AND player_name = 'Stephen Curry'
-'''
+```
 
 ![alt tag](https://github.com/milan102/nba-database/blob/master/gifs/query.gif)
 
@@ -30,11 +30,11 @@ SELECT * FROM player_reg_season
 - [Make sure you have pip, run `pip --version` in a command line to verify](https://pip.pypa.io/en/stable/installing/)
 
 Do the following in a command line:
-'''
+```
 pip install requests
 pip install pandas
 pip install nba_py
-'''
+```
 
 
 ## Instructions for Modifying Presets
@@ -44,7 +44,7 @@ The *nba_db_presets.py* file has two items that can be changed:
 
 I recommend you **do not** modify the start year because certain stats from before 1984 are missing and incomplete
 
-'''python
+```python
 \# Create database starting with the year Micheal Jordan got drafted, the 1984-85 season
 db_start_year = 1984
 
@@ -54,7 +54,7 @@ current_year = now.year
 
 \# Name of database file
 database_name = 'nba.db'
-'''
+```
 
 
 ## Notes
