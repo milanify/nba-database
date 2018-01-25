@@ -48,7 +48,7 @@ The *nba_db_presets.py* file has two items that can be changed:
 1. Database start year
 2. Name of database file
 
-I recommend you **do not** modify the start year because certain stats from before 1984 are missing and incomplete
+I **do not** recommend you modify the start year because certain stats from before 1984 are missing and incomplete
 
 ```python
 # Create database starting with the year Micheal Jordan got drafted, the 1984-85 season
