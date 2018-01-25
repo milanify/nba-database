@@ -1,3 +1,7 @@
+"""
+Run this file to create your database from scratch
+"""
+
 from nba_db_presets import *
 
 
@@ -10,10 +14,9 @@ Args:
     db_table_name (str): Name of the sqlite database table
 """
 def createPlayerBoxScores(the_season_type, db_table_name):
-
     for year in range(start_year, end_year + 1):
         season_string = formatSeasonString(year)
-        stats = getDataFrame(season_string, the_season_type)
+        stats = getFinalizedStats(season_string, the_season_type)
 
         if len(stats) != 0:
             stats.to_sql(db_table_name, conn, if_exists='append')
@@ -53,7 +56,7 @@ end_year = current_year
 
 
 """
-Loop through dictionary defined in presets.py file
+Loop through dictionary defined in nba_db_presets.py file
 If table does not exist in the database, must be created
 """
 for season_type, table_name in season_types.items():

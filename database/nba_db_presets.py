@@ -1,3 +1,10 @@
+"""
+Contains two presets you can change:
+    the database start year
+    the database file name
+
+Contains all common library dependencies and functions used by create_db.py and update_db.py
+"""
 import datetime
 import sqlite3
 import pandas as pd
@@ -74,14 +81,31 @@ Args:
 Return:
     Pandas DataFrame object without null values in the W/L column
 """
-def dropNullValues(stats_data_frame, the_season_string, the_season_type):
+def dropGamesInProgress(stats_data_frame, the_season_string, the_season_type):
     dataframe_rows_before_dropping = len(stats_data_frame)
     stats_dataframe = stats_data_frame.dropna(subset=['WL'])
     dataframe_rows_after_dropping = len(stats_dataframe)
 
     amount_of_rows_dropped = dataframe_rows_before_dropping - dataframe_rows_after_dropping
+
     if amount_of_rows_dropped > 0:
-        print("{} entries for {} {} are for games currently in progress. Update again later to get them.".format(
+        print("{} entries for {} {} are for games currently in progress. Update later to get them.".format(
             amount_of_rows_dropped, the_season_string, the_season_type))
 
     return stats_dataframe
+
+
+"""
+Gets finalized stats from finished games
+
+Args:
+    the_season_string (str): season in YYYY-YY format
+    the_season_type (str): Pre Season, Regular Season, All Star, or Playoffs
+    
+Return:
+    Pandas DataFrame object with stats from completed games
+"""
+def getFinalizedStats(the_season_string, the_season_type):
+    stats_with_null = getDataFrame(the_season_string, the_season_type)
+    finalized_stats = dropGamesInProgress(stats_with_null, the_season_string, the_season_type)
+    return finalized_stats
