@@ -2,8 +2,6 @@
 
 Create and update your own database of **National Basketball Association *(NBA)*** player box score statistics
 
-Or use this repository to download periodically updated database files (coming soon)
-
 
 ## Preview
 > Creating
